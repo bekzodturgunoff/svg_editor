@@ -1,0 +1,97 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.color-picker {
+  --left: 0px;
+  --top: 0px;
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  opacity: 0;
+  z-index: -1;
+}
+
+.hair {
+  --fill: #231f20;
+}
+
+.skin {
+  --fill: #ffd2a8;
+}
+
+.shoes {
+  --fill: #035eac;
+}
+
+.whites {
+  --fill: #fff;
+}
+
+.shorts {
+  --fill: #1c6a92;
+}
+
+.shirt {
+  --fill: #ffe171;
+}
+
+.mouth {
+  --fill: #d65050;
+}
+
+.tongue {
+  --fill: #eb6e74;
+}
+
+.shorts, .shirt, .skin, .whites, .shoes, .hair, .tongue, .mouth {
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  fill: var(--fill);
+}
+
+.shirt:hover,
+.shorts:hover,
+.skin:hover,
+.whites:hover,
+.shoes:hover,
+.hair:hover,
+.tongue:hover,
+.mouth:hover {
+  filter: brightness(80%);
+}
+
+.editor-container {
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.btn {
+  border: none;
+  background: yellowgreen;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.btn:hover {
+  background: greenyellow;
+}
+
+
+@media (min-width: 48rem)  {
+  .editor-container {
+    max-width: 50%;
+  }
+}
